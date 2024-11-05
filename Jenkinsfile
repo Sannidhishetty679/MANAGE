@@ -6,11 +6,13 @@ pipeline {
     }
  
     stages {
-        stage('Checkout') {
-            steps {
-                // Clone the repository
-                git 'https://github.com/Sannidhishetty679/MANAGE.git'
-            }
+       stage('Checkout') {
+    steps {
+        // Clone the repository and specify the branch
+        git branch: 'main', url: 'https://github.com/Sannidhishetty679/MANAGE.git'
+    }
+}
+
         }
  
         stage('Build') {
